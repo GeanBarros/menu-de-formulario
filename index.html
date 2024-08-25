@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto2</title>
+    <style>
+        nav {
+          background-color: #333;  
+          padding: 1em;
+          color: white;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0%;
+            padding: 0%;
+            display: flex;
+            gap: 1em;
+        }
+
+        nav ul li {
+            margin: 0%;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .login-form {
+            display: flex;
+            gap: 0.5em;
+        }
+
+        .login-form input[type="email"],
+        .login-form input[type="password"] {
+            padding: 0.5em;
+            border: none;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+
+        .login-form input[type="submit"] {
+            padding: 0.5em 1em;
+            border: none;
+            border-radius: 4px;
+            background-color: #555;
+            color: white;
+            font-size: 1em;
+            cursor: pointer;
+        }
+
+        .login-form input[type="submit"] :hover {
+            background-color: #777;
+        }
+
+        @media (min-width: 600px) {
+            .login-form {
+                flex-direction: row;
+                align-items: center;
+                gap: 0.5em;
+            }
+            .login-form input[type="email"],
+            .login-form input[type="password"] {
+                width: auto;
+                max-width: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <form class="login-form" action="/login" method="post">
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Senha" required>
+            <input type="submit" value="login">
+        </form>
+    </nav>
+
+</body>
+</html>
